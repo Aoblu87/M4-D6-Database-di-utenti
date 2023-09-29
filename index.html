@@ -14,28 +14,33 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <h1>Search Users</h1>
 
             </div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <div class="col input-group mb-3">
+                <input id="input-query" type="text" class="" aria-label="Text input with dropdown button">
                 <div class="col">
 
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Choose one</option>
-                        <option value="1">Name</option>
-                        <option value="2">Username</option>
-                        <option value="3">Email</option>
+                    <select id="choose-one" class="form-select" aria-label="Default select example">
+                        <option id="not-selected"  selected>Choose one</option>
+                        <option id="nameQuery" value="1">Name</option>
+                        <option id="usernameQuery" value="2">Username</option>
+                        <option id="emailQuery" value="3">Email</option>
                     </select>
                 </div>
+                <div class="col">
+
+                    <button id="search-btn" type="button" class="btn btn-secondary" onclick="query()">Search</button>
+                </div>
+
             </div>
         </div>
     </div>
 
 
     <div class="container">
-        <div id="table-container" class="row">
+        <div class="row">
 
             <table class="table">
                 <thead>
@@ -47,7 +52,7 @@
                     </tr>
                 </thead>
                 <tbody id="table-container">
-                    
+
                 </tbody>
             </table>
 
